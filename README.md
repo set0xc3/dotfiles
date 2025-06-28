@@ -1,0 +1,4 @@
+# dotfiles
+
+deps:
+- stow

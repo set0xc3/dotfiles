@@ -1,0 +1,17 @@
+#!/bin/sh
+
+tmux send-keys 'cd $HOME/vault/dev/voznya-parent' Enter
+tmux send-keys './gradlew voznya-server:run' Enter
+
+tmux split-window -h
+tmux send-keys 'cd $HOME/vault/dev/voznya-parent/voznya-plevok-plugin-main/src/main/test-server' Enter
+tmux send-keys './start.sh' Enter
+
+tmux split-window -v
+tmux send-keys 'cd $HOME/vault/dev/voznya-parent/voznya-client' Enter
+tmux send-keys 'npm run start' Enter
+
+tmux select-pane -t 1
+tmux split-window -v
+tmux send-keys 'cd $HOME/vault/dev/voznya-parent' Enter
+tmux send-keys 'code .' Enter

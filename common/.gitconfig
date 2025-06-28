@@ -1,0 +1,7 @@
+[user]
+	email = set0xc3@gmail.com
+	name = set0xc3
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
