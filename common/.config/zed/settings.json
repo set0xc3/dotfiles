@@ -15,7 +15,7 @@
 
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Tailwind Syntax",
     "dark": "Gruvbox Dark"
   },
 
@@ -32,7 +32,8 @@
 
   "languages": {
     "C++": {
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "tab_size": 2
     }
   }
 }
