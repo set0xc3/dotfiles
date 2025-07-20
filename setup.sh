@@ -1,4 +1,5 @@
 #!/bin/sh
 set -e
 
-stow --dir="$PWD" --target="$HOME" --adopt common
+stow --dir="$PWD/hosts" --target="$HOME" --adopt common
+
