@@ -82,7 +82,9 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 # ---------- Prompt ----------
-PROMPT='[☭] %~ # '
+PROMPT='
+%F{cyan}%~%f
+%F{white}# %f'
 
 # ---------- Plugins ----------
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then

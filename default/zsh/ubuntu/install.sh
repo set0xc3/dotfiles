@@ -27,7 +27,7 @@ if [ -n "$ZSH_PATH" ]; then
 fi
 
 echo "[6/7] Writing .zshrc..."
-cat > "$HOME/.zshrc" <<'EOF'
+cat >"$HOME/.zshrc" <<'EOF'
 # ---------- Basic ----------
 bindkey -e
 
@@ -88,7 +88,10 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 # ---------- Prompt ----------
-PROMPT='[☭] %~ # '
+PROMPT='
+%F{cyan}%~%f
+%F{white}# %f'
+ROMPT='[☭] %~ # '
 
 # ---------- Plugins ----------
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -105,4 +108,3 @@ chsh -s "$(command -v zsh)" "$USER" || true
 
 echo "Done."
 echo "Log out and log back in, or run: exec zsh"
-
